@@ -35,3 +35,7 @@ Run the website with **Ctrl+F5**, and the tests with **Test > Run All Tests** (o
 - Make `CategoryId` an `int?`, so an unchosen category is `null` and `[Required]` can catch it.
 - The session holds text: store the list of ids as JSON with `JsonSerializer`.
 - The test that adds a book deletes it again afterward, so your database stays as it was.
+
+## Hand it in
+
+When it works, push your solution to a public repo of your own on GitHub, then paste that repo's address into **Submit your exercise** on the lesson page at [ask-codey.com](https://www.ask-codey.com). That's what completes the lesson. The lesson page shows the Git commands, step by step.

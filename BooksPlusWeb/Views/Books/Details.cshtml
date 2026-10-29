@@ -1,0 +1,28 @@
+@model Book
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+<dl class="row mt-4">
+    <dt class="col-sm-3">Published</dt>
+    <dd class="col-sm-9">@Model.PublishDate.ToString("MMMM d, yyyy")</dd>
+
+    <dt class="col-sm-3">Price</dt>
+    <dd class="col-sm-9">
+        @if (Model.Price is null)
+        {
+            <span class="text-body-secondary">Not for sale yet</span>
+        }
+        else
+        {
+            @Model.Price.Value.ToString("C")
+        }
+    </dd>
+
+    <dt class="col-sm-3">Summary</dt>
+    <dd class="col-sm-9">@(Model.Summary ?? "No summary yet.")</dd>
+</dl>
+
+<a class="btn btn-outline-secondary" asp-action="Index">Back to all books</a>

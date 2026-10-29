@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Sign in";
+    string? error = ViewData["Error"] as string;
+}
+
+<h1>Sign in</h1>
+
+@if (error is not null)
+{
+    <div class="alert alert-danger">@error</div>
+}
+
+<form method="post" asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]" style="max-width: 24rem;">
+    <div class="mb-3">
+        <label for="userName" class="form-label">User name</label>
+        <input id="userName" name="userName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" name="password" type="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form>

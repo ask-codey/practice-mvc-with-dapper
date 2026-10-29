@@ -1,0 +1,25 @@
+@model List<Book>
+@{
+    ViewData["Title"] = "Search";
+    string? searchText = ViewData["SearchText"] as string;
+}
+
+<h1 class="mb-4">Search for a Book</h1>
+
+<form method="get" asp-action="Search" class="d-flex gap-2 mb-4" style="max-width: 32rem;">
+    <input type="search" name="title" value="@searchText" class="form-control" placeholder="Part of a title, such as SQL" aria-label="Title">
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@if (!string.IsNullOrWhiteSpace(searchText))
+{
+    <p>@Model.Count books match "@searchText".</p>
+    <ul class="list-group">
+        @foreach (Book book in Model)
+        {
+            <li class="list-group-item">
+                <a asp-action="Details" asp-route-id="@book.BookId">@book.Title</a>
+            </li>
+        }
+    </ul>
+}

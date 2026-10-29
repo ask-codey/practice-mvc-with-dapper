@@ -1,0 +1,36 @@
+@model Book
+@{
+    ViewData["Title"] = "Add a Book";
+    List<Category> categories = (List<Category>)ViewData["Categories"]!;
+}
+
+<h1 class="mb-4">Add a Book</h1>
+
+<form method="post" asp-action="Create" style="max-width: 32rem;">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label">Category</label>
+        <select asp-for="CategoryId" class="form-select">
+            @foreach (Category category in categories)
+            {
+                <option value="@category.CategoryId">@category.CategoryName</option>
+            }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PublishDate" class="form-label">Publish date</label>
+        <input asp-for="PublishDate" type="date" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Summary" class="form-label"></label>
+        <textarea asp-for="Summary" class="form-control" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add the book</button>
+</form>

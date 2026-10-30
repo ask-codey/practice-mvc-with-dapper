@@ -9,7 +9,7 @@ public class AppUser
     public string Role { get; set; } = "";
 }
 
-// Checks user names and passwords, ready to use. To keep the practice short, the users live
+// Checks user names and passwords, ready to use. To keep the exercise short, the users live
 // in memory; a real app keeps them, with their password hashes, in a database table.
 //
 //   admin / Bookworm-Admin-2026   (role Admin: may add books)

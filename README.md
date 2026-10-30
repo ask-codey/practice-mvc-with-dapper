@@ -1,8 +1,8 @@
-# Practice: MVC with Dapper
+# Exercise: MVC with Dapper
 
-Practice code for the lesson **Practice: MVC with Dapper** in the C# Full-Stack Bootcamp on [ask-codey.com](https://www.ask-codey.com).
+Exercise code for the lesson **Exercise: MVC with Dapper** in the C# Full-Stack Bootcamp on [ask-codey.com](https://www.ask-codey.com).
 
-This is the BooksPlus website from *Practice: BooksPlus*, ready to grow up. You'll move its data access to Dapper and dependency injection, give it friendly addresses and a paged list of cards, validate the **Add a Book** form, let only administrators add books, and remember the books each visitor has just looked at.
+This is the BooksPlus website from *Exercise: BooksPlus*, ready to grow up. You'll move its data access to Dapper and dependency injection, give it friendly addresses and a paged list of cards, validate the **Add a Book** form, let only administrators add books, and remember the books each visitor has just looked at.
 
 ## Before you start
 
@@ -10,7 +10,7 @@ The tests start your website and read your own BooksPlus database, so SQL Server
 
 ## What's here
 
-- `BooksPlusWeb`: the website as *Practice: BooksPlus* left it, with the Dapper package added.
+- `BooksPlusWeb`: the website as *Exercise: BooksPlus* left it, with the Dapper package added.
 - **Ready to use:** `Services/UserService.cs` (two users: `admin` / `Bookworm-Admin-2026` with the Admin role, `clerk` / `Bookworm-Clerk-2026` with the Staff role), `Controllers/AccountController.cs` and its views, `Views/Shared/_LoginStatus.cshtml` (already in the layout) and `Views/Shared/_ValidationScriptsPartial.cshtml`.
 - `BooksPlusWeb.Tests`: tests that use your website the way a browser would. You don't need to change these.
 
